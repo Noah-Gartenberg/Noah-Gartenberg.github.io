@@ -38,18 +38,19 @@
                 
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/kSRfPjOYukI?si=VBbW6cOsSzx3VAsh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <ul class="BulletPoints hideBulletPoints">
-                    <li>For this game, I worked with the rest of the Game Design Club at my college</li>
-                    <li>We all worked together to design the game, I then helped write some of the NPC dialogue (particularly level 3), programmed many of the game's systems, and implemented the game into Unity</li>
-                    <li>We designed a simple gameplay loop of players being given an item (normally in the previous level), and having to figure out whom to give it to by interacting with the NPCs</li>
-                    <li>Only by giving the correct NPC their corresponding item, could players be able to progress, eventually find out what happens to Llewyllyn, and escape the prison</li>
+                    <li>The people in my college’s game design club and I worked together to design the game. In addition to being a member of the writing sub-team, I was also one of the main programmers, and I programmed the dialogue, movement, timer, and camera systems.</li>
+                    <li>The dialogue system was how I learned about scriptable objects and the singleton programming pattern, and it was designed to facilitate interactions between players and the NPCs. I wound up adding more to it to facilitate cutscene-like behavior, with behaviors like sounds being played on specific dialogue lines, objects being activated or deactivated on other lines, the player being able to trade items away, and more needing to be implemented. While this was a struggle to solve out at first, I eventually figured out that I could add in code that would check dialogue for the word “Commands,” and if it appeared, then the dialogue system would do those commands (activate/deactivate items, play sounds, trade item, etc…).” Although this system wasn’t very robust, and would have sorely benefited from my learning of the Observer programming pattern sooner, I am still proud of what I was able to accomplish with the knowledge I had at the time.</li>
+                    <li>The movement (a simple point and click system) and timer systems were relatively simple, with the only major issue I had to overcome was making them fuse with the dialogue system such that players couldn’t move or lose because the timer ran out while dialogue was ongoing.</li>
+                    <li>I designed the camera system to have set areas where players would see through a specific camera when players entered a corresponding trigger collider. The camera would turn towards the player as they moved, so players could always see in which direction they were going, without needing control over the camera’s movement.</li>
                 </ul>
             <h3>Games I made during Game Jams - MicroJam Game Submissions (<a href="https://itch.io/c/4828693/game-jam-games-i-have-made" class="PageLink"><i>Link</i></a>)</h3>
             <ul class="BulletPoints hideBulletPoints">
-                <li>For these games, I worked by myself as I was unable to find people I felt comfortable working with.</li>
-                <li>I had 2 days for each of these games to make a functioning video game that met the theme (which I knew before the jam started) and the prerequisite (which was revealed at the start of the jam), both of which would impact how I made the games.</li>
-                <li>I used these game jams as opportunities to get better at using various programming patterns I had recently learned about (like Singletons, Observers, and Composition), in addition to me challenging myself at times to figure out how game developers make things like notes in video games.</li>
-                <li>Although none of these games ever won, I noticed a massive growth in the code I wrote, as it changed from being heavily coupled code during my first game jam, to being largely modulable.</li>
-                <li>I also gained a better understanding of how long it takes for me to make things (specifically when I have pressure outside myself being applied), and as a result, my games were able to become more polished within largely the same amounts of time required</li>
+                <li>I worked by myself for these games.I had 2 days for each of these games to make a functioning video game that met the theme, which I knew before the jam started, and the prerequisite, which was revealed at the start of the jam, both of which would impact how I made the games.</li>
+                <li>I used these game jams as opportunities to improve my skills at various programming patterns I had recently learned about (like Singletons, Observers, and Composition), in addition to challenging myself at times to figure out how game developers make things like notes in video games.</li>
+                <li>I found these game jams to be a really valuable experience, as they helped me grow as a programmer. In the first game jam game I made, “Precipitation on Planet P9” (<a href="https://nzgberg.itch.io/precipitating-on-planet-p9">link</a>), I hadn’t yet learned of the Composition programming pattern, and as a result, much of my code was needlessly copied and pasted into other files.</li>
+                <li>For example, I had two separate classes for raindrops: a player raindrop, and an enemy raindrop. This made my attempt to go back and add more to the game after the jam extremely difficult and infuriating. However, in the last game jam game I made, “Future Historian,” (<a href="https://nzgberg.itch.io/future-historian">link</a>), this is no longer a problem. </li>
+                <li>Every single behavior that needed to be separated is in its own component. During the jam, I didn’t need to rewrite code for behaviors like shooting lasers at enemies, or enemies shooting at players, I literally just slapped the component that enabled such behavior onto both prefabs, added a few lines to enable this in the “hub” components that corresponded to the players controls or the enemy ai, and then the components worked how they needed too.</li>
+                <li>I also gained a better understanding of how long it takes for me to make things (specifically when I have pressure outside myself being applied), and as a result, my games in subsequent jams became more polished within largely the same amounts of time required.</li>
             </ul>
             <hr>
         </section>
@@ -59,25 +60,19 @@
             <h2>Web Development</h2>
             <h3>Reading Ruler Firefox Plugin - Personal Project (<a href="https://addons.mozilla.org/en-US/firefox/addon/reading-ruler-plug-in/" class = "PageLink"><i>Link</i></a>)</h3>
             <ul class="BulletPoints hideBulletPoints">
-                <li>After struggling to read what I felt was a particularly poorly formatted article for a class, I sought to find a reading ruler plug in, but couldn't find any (I didn't know they were called add-ons, and not extensions, on firefox)</li>
-                <li>I decided to fix this problem by making myself a reading ruler plug in for Firefox using HTML, CSS, and JavaScript.</li>
-                <li>I figured out how to make a reading ruler that obscured all text outside an adjustable area.</li>
-                <li>This project took me about a month to get working, with a several month gap between first getting the ruler to work, and actually publishing it, as to be honest, I kind of forgot I'd been working on it as I was using all my spare time on it; spare time towards the end of the month that I rapidly started to lose.</li>
+                <li>I was sitting in front of my computer in my dorm room, struggling to read a particularly poorly formatted article for a class, when I realized I could really use a reading ruler add-on to help me focus on reading one line at a time.</li>
+                <li>I decided to fix this problem by making myself a reading ruler plug-in for Firefox that obscures all text outside an adjustable area. I coded it using HTML, CSS, and JavaScript, and this project took me about a month to get working. Check it out for yourself!</li>
             </ul>
             <h3>My Portfolio Website</h3>
             <ul class="BulletPoints hideBulletPoints">
-                <li>I designed and made this website from scratch, which is likely clear if you look at it.</li>
-                <li>The creation of this website overall has taken me two months, with a one month gap due to college starting again and the high workloads that came with it.</li>
-                <li>I am aware that this isn't really that impressive, but I'm hoping to have more examples besides this one in the future, or to make this more impressive.</li>
-                <li>I was originally intending to just use a template, but I got overwhelmed when looking through the code, and didn't feel I could adjust it to suit my needs in a way that wouldn't be extremely clear.</li>
-                <li>Also, I have been meaning to refresh my knowledge of HTML, CSS, and JavaScript for a while now -- it wasn't gone, but I don't have many opportunities to use it</li>
+                <li>I designed and made this website from scratch. It’s been good to refresh my knowledge of HTML, CSS, and JavaScript and to have an opportunity to use it again.</li>
             </ul>
             <hr>
         </section>
         <a class="anchor" id="SoftwareDevelopmentAnchor"></a>
         <section id="SoftwareDevelopment">
             <h2>Software Development</h2>
-            <p>I don't currently have anything to put in this section yet, but I'm working on a project or two that I'm hopeful to soon have in a state where I can put an image of it and describe my goals, even if the finished product isn't complete</p>
+            <p>Come back soon! I'm working on a project or two and should have them in a state to share an image and describe my goals soon, while I work on completing the  finished product.</p>
             <hr>
         </section>
         <footer class="Links">
