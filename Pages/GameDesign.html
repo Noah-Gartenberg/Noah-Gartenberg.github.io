@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Noah Gartenberg's Game Design Portfolio</title>
+        <meta charset = "utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <link rel="stylesheet" href="..\Assets\css\styles.css"/>
+        
+        
+    </head>
+    <body>
+        <!--Scroll https://www.sitepoint.com/community/t/scroll-down-to-to-id-with-javascript-fixed/423158/2-->
+        <nav class="navigation">
+            <!-- The goal of this section is to provide easy navigation to other
+             pages of my portfolio -->
+             <ul class="PortfolioLinks hideBulletPoints">
+                <a href = "..\index.html" class="PortfolioLink">Home Page</a>
+                <a href = "..\Pages/GameDesign.html" class="PortfolioLink">Game Design Portfolio</a>
+                <a href = "..\Pages/Programming.html" class="PortfolioLink">Programming Portfolio</a>
+                <a href = "..\Pages/Writing.html" class="PortfolioLink">Writing Portfolio</a>
+             </ul>
+        </nav>
+        <header class="Explanation">
+            <h1>Game Design</h1>
+            <!--<img src="..\images/header.jpg" style="width:50%"/>-->
+        </header>
+        <section class = "NavigationLinks">
+            <h4>Page Sections</h4>
+            <!--This section will have links to the projects I'm showcasing on my portfolio, and will have a brief explanation of what you'll find in this part-->
+            <ul class="hideBulletPoints">
+                <li><a href = #PortfolioPiecesAnchor class="ItemLink">Portfolio Pieces</a></li>
+                <li><a href = #OtherWorksAnchor class="ItemLink">Other Works</a></li>
+            </ul>
+        </section>
+        <a class="anchor" id="PortfolioPiecesAnchor"></a>
+        
+        <section id="PortfolioPieces" class="anchor">
+            <h2>Portfolio Pieces</h2>
+            <!--This section will contain the actual projects I"m showcasing-->
+                <!-- This is one thing that I have made -- I know I will want images, videos, or other things...-->
+                 <h3>Monkey's Paw Sweater - Mod For Baldur's Gate 3 - 179 downloads (<a href = "https://www.nexusmods.com/baldursgate3/mods/11971" class = "PageLink"><i>link</i></a>)</h3>
+                 <!--Make these into bulleted lists, and then because the bullets are hidden, hopefully they'll stack on top of eachother-->
+                 <!--May be worth seperating out the css files so that I only have exactly what I need in each file-->
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/N86G7byqXRU?si=qTvfpAS-84Tv0TTc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                 <ul class="BulletPoints hideBulletPoints">
+                    <li>I created an armor (specifically geared towards the wild-magic sorcerer subclass, and specifically made for characters at least level 4) that allows players to nullify one instance of damage per short rest by triggering a wild magic surge</li>
+                    <li>I designed the wild magic surges to be extremely situational in terms of use; Some surges will enable or disable mobility, or cause players to take more or less damage, or enable or disable enemies</li>
+                    <li>I originally inteded for this mod to be simple so I could focus on learning to make mods; it would have functioned the same, but instead triggered one of the normal wild magic surges, instead of my custom surges;  upon playtesting, I found that this lessened the novelty of those magic surges, and created some custom ones to maintain the novelty the vanilla wild magic surges bring to the game</li>
+                    <li>The Wild Magic Sorcery subclass causes all spells cast by a sorcerer to have a chance of triggering a random "wild magic surge," which can make any combat encounter chaotic and more novel than it was previously</li>
+                 </ul>
+                <h3>Cigarmonica - Game Design Club Group Project - 6 downloads (<a href="https://albino-penguin.itch.io/cigarmonica" class="PageLink"><i>link</i></a>)</h3>
+                
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kSRfPjOYukI?si=VBbW6cOsSzx3VAsh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <ul class="BulletPoints hideBulletPoints">
+                    <li>For this game, I worked with the rest of the Game Design Club at my college</li>
+                    <li>We all worked together to design the game, I then helped write some of the NPC dialogue (particularly level 3), programmed many of the game's systems, and implemented the game into Unity</li>
+                    <li>We designed a simple gameplay loop of players being given an item (normally in the previous level), and having to figure out whom to give it to by interacting with the NPCs</li>
+                    <li>Only by giving the correct NPC their corresponding item, could players be able to progress, eventually find out what happens to Llewyllyn, and escape the prison</li>
+                </ul>
+            <hr>
+        </section>
+        <a class="anchor" id="OtherWorksAnchor"></a>
+        <section id= "OtherWorks">
+            <h2>Other projects I have worked on</h2>
+            <ul class="hideBulletPoints">
+                <li><a href="https://www.nexusmods.com/baldursgate3/mods/12211" class="OtherWork" >Greater Knock - Mod for Baldur's Gate 3 - 49 downloads</a></li>
+                <li><a href="https://nzgberg.itch.io/precipitating-on-planet-p9" class="OtherWork" >Precipitation On Planet P9 - Game Jam Game: Microjam 18</a></li>
+                <li><a href="https://nzgberg.itch.io/simplemath" class="OtherWork" >Simple Math - Game Jam Game: Microjam 19</a></li>
+                <li><a href="https://nzgberg.itch.io/future-historian" class="OtherWork" >Future Historian - Game Jam Game: Microjam 20</a></li>
+            </ul>
+            <hr>
+        </section>
+        <footer class="Links">
+            <!-- The goal of this section is to provide links to resumes or social medias or etc... on my portfolio -->
+            <!-- I would like for these links to be horizontal along the bottom and easily differentiable with text below them-->
+            <p class="Explanation">You can find my social media or ways to contact me below</p> <!-- holder text for icons or images that I will hope to put here -->
+            
+            <ul class="ResumeEmail hideBulletPoints">
+               <li><a href = #>General Resume</a></li>
+               <li><a href = "mailto:noahGartenberg1@gmail.com">Email Address</a></li>
+            </ul>
+            <ul class = "SocialLinks hideBulletPoints">
+                <li><a href = "https://nzgberg.itch.io/" class="SocialLink"><img src = "../images/itchio-textless-black.svg" style="width:96px;height:96px;"/><p>itch.io</p></a></li>
+                <li><a href = "https://github.com/Noah-Gartenberg" class="SocialLink"><img src = "../images/github-mark.png" style="width:96px;height:96px;"/><p>Github</p></a></li>
+                <li><a href = "https://next.nexusmods.com/profile/nzgberg/about-me" class="SocialLink"><img src = "../images/nexusModsLog.png" style="width:96px;height:96px;"/><p>Nexus Mods</p></a></li>
+                <li><a href = "www.linkedin.com/in/noah-gartenberg" class="SocialLink"><img src = "../images/In-Blue-96.png" style="width:96px;height:96px;"/><p>LinkedIn</p></a></li>
+               
+            </ul>
+        </footer>
+    </body>
+</html>
