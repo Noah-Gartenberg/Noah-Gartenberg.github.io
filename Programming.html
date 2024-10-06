@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Noah Gartenberg's Programming Portfolio</title>
+        <meta charset = "utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <link rel="stylesheet" href="..\Assets\css\styles.css"/>
+        
+        
+    </head>
+    <body>
+        <nav class="navigation">
+            <!-- The goal of this section is to provide easy navigation to other
+             pages of my portfolio -->
+             <ul class="PortfolioLinks hideBulletPoints">
+                <a href = "..\index.html" class="PortfolioLink">Home Page</a>
+                <a href = "..\Pages/GameDesign.html" class="PortfolioLink">Game Design Portfolio</a>
+                <a href = "..\Pages/Programming.html" class="PortfolioLink">Programming Portfolio</a>
+                <a href = "..\Pages/Writing.html" class="PortfolioLink">Writing Portfolio</a>
+             </ul>
+        </nav>
+        <header class="Explanation">
+            <h1>Programming</h1>
+            <!--<img src="..\images/header.jpg" style="width:50%"/>-->
+        </header>
+        <section class="NavigationLinks">
+            <h4>Page Sections</h4>
+            <ul class="hideBulletPoints">
+                <li><a href = #ProgrammingGamesAnchor class="ItemLink">Games Programming</a></li>
+                <li><a href = #WebDesignAnchor class="ItemLink">Web Design</a></li>
+                <li><a href = #SoftwareDevelopmentAnchor class="ItemLink">Software Development</a></li>
+            </ul>
+        </section>
+        <a class="anchor" id="ProgrammingGamesAnchor"></a>
+        <section id="ProgrammingGames">
+            <h2>Programming Games</h2>
+            <h3>Cigarmonica</a> - Game Design Club Group Project (<a href="https://albino-penguin.itch.io/cigarmonica" class="PageLink"><i>Link</i></a>)- 6 downloads</h3>
+                
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kSRfPjOYukI?si=VBbW6cOsSzx3VAsh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <ul class="BulletPoints hideBulletPoints">
+                    <li>The people in my college’s game design club and I worked together to design the game. In addition to being a member of the writing sub-team, I was also one of the main programmers, and I programmed the dialogue, movement, timer, and camera systems.</li>
+                    <li>The dialogue system was how I learned about scriptable objects and the singleton programming pattern, and it was designed to facilitate interactions between players and the NPCs. I wound up adding more to it to facilitate cutscene-like behavior, with behaviors like sounds being played on specific dialogue lines, objects being activated or deactivated on other lines, the player being able to trade items away, and more needing to be implemented. While this was a struggle to solve out at first, I eventually figured out that I could add in code that would check dialogue for the word “Commands,” and if it appeared, then the dialogue system would do those commands (activate/deactivate items, play sounds, trade item, etc…).” Although this system wasn’t very robust, and would have sorely benefited from my learning of the Observer programming pattern sooner, I am still proud of what I was able to accomplish with the knowledge I had at the time.</li>
+                    <li>The movement (a simple point and click system) and timer systems were relatively simple, with the only major issue I had to overcome was making them fuse with the dialogue system such that players couldn’t move or lose because the timer ran out while dialogue was ongoing.</li>
+                    <li>I designed the camera system to have set areas where players would see through a specific camera when players entered a corresponding trigger collider. The camera would turn towards the player as they moved, so players could always see in which direction they were going, without needing control over the camera’s movement.</li>
+                </ul>
+            <h3>Games I made during Game Jams - MicroJam Game Submissions (<a href="https://itch.io/c/4828693/game-jam-games-i-have-made" class="PageLink"><i>Link</i></a>)</h3>
+            <ul class="BulletPoints hideBulletPoints">
+                <li>I worked by myself for these games.I had 2 days for each of these games to make a functioning video game that met the theme, which I knew before the jam started, and the prerequisite, which was revealed at the start of the jam, both of which would impact how I made the games.</li>
+                <li>I used these game jams as opportunities to improve my skills at various programming patterns I had recently learned about (like Singletons, Observers, and Composition), in addition to challenging myself at times to figure out how game developers make things like notes in video games.</li>
+                <li>I found these game jams to be a really valuable experience, as they helped me grow as a programmer. In the first game jam game I made, “Precipitation on Planet P9” (<a href="https://nzgberg.itch.io/precipitating-on-planet-p9">link</a>), I hadn’t yet learned of the Composition programming pattern, and as a result, much of my code was needlessly copied and pasted into other files.</li>
+                <li>For example, I had two separate classes for raindrops: a player raindrop, and an enemy raindrop. This made my attempt to go back and add more to the game after the jam extremely difficult and infuriating. However, in the last game jam game I made, “Future Historian,” (<a href="https://nzgberg.itch.io/future-historian">link</a>), this is no longer a problem. </li>
+                <li>Every single behavior that needed to be separated is in its own component. During the jam, I didn’t need to rewrite code for behaviors like shooting lasers at enemies, or enemies shooting at players, I literally just slapped the component that enabled such behavior onto both prefabs, added a few lines to enable this in the “hub” components that corresponded to the players controls or the enemy ai, and then the components worked how they needed too.</li>
+                <li>I also gained a better understanding of how long it takes for me to make things (specifically when I have pressure outside myself being applied), and as a result, my games in subsequent jams became more polished within largely the same amounts of time required.</li>
+            </ul>
+            <hr>
+        </section>
+        
+        <a class="anchor" id="WebDesignAnchor"></a>
+        <section id="WebDesign">
+            <h2>Web Development</h2>
+            <h3>Reading Ruler Firefox Plugin - Personal Project (<a href="https://addons.mozilla.org/en-US/firefox/addon/reading-ruler-plug-in/" class = "PageLink"><i>Link</i></a>)</h3>
+            <ul class="BulletPoints hideBulletPoints">
+                <li>I was sitting in front of my computer in my dorm room, struggling to read a particularly poorly formatted article for a class, when I realized I could really use a reading ruler add-on to help me focus on reading one line at a time.</li>
+                <li>I decided to fix this problem by making myself a reading ruler plug-in for Firefox that obscures all text outside an adjustable area. I coded it using HTML, CSS, and JavaScript, and this project took me about a month to get working. Check it out for yourself!</li>
+            </ul>
+            <h3>My Portfolio Website</h3>
+            <ul class="BulletPoints hideBulletPoints">
+                <li>I designed and made this website from scratch. It’s been good to refresh my knowledge of HTML, CSS, and JavaScript and to have an opportunity to use it again.</li>
+            </ul>
+            <hr>
+        </section>
+        <a class="anchor" id="SoftwareDevelopmentAnchor"></a>
+        <section id="SoftwareDevelopment">
+            <h2>Software Development</h2>
+            <p>Come back soon! I'm working on a project or two and should have them in a state to share an image and describe my goals soon, while I work on completing the  finished product.</p>
+            <hr>
+        </section>
+        <footer class="Links">
+            <!-- The goal of this section is to provide links to resumes or social medias or etc... on my portfolio -->
+            <!-- I would like for these links to be horizontal along the bottom and easily differentiable with text below them-->
+            <p class="Explanation">You can find my social media or ways to contact me below</p> <!-- holder text for icons or images that I will hope to put here -->
+            
+            <ul class="ResumeEmail hideBulletPoints">
+               <li><a href = #>General Resume</a></li>
+               <li><a href = "mailto:noahGartenberg1@gmail.com">Email Address</a></li>
+            </ul>
+            <ul class = "SocialLinks hideBulletPoints">
+                <li><a href = "https://nzgberg.itch.io/" class="SocialLink"><img src = "../images/itchio-textless-black.svg" style="width:96px;height:96px;"/><p>itch.io</p></a></li>
+                <li><a href = "https://github.com/Noah-Gartenberg" class="SocialLink"><img src = "../images/github-mark.png" style="width:96px;height:96px;"/><p>Github</p></a></li>
+                <li><a href = "https://next.nexusmods.com/profile/nzgberg/about-me" class="SocialLink"><img src = "../images/nexusModsLog.png" style="width:96px;height:96px;"/><p>Nexus Mods</p></a></li>
+                <li><a href = "www.linkedin.com/in/noah-gartenberg" class="SocialLink"><img src = "../images/In-Blue-96.png" style="width:96px;height:96px;"/><p>LinkedIn</p></a></li>
+               
+            </ul>
+        </footer>
+    </body>
+</html>
