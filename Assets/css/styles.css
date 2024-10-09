@@ -144,7 +144,7 @@ header {
         text-justify:inter-word;
     }
 
-    ul.BulletPoints:not(ul.hideBulletPoints) li{
+    ul.hideBulletPoints ul.BulletPoints:not(ul.hideBulletPoints) li{
         text-align: justify;
         text-justify: inter-word;
         list-style-type: disc;
