@@ -144,9 +144,12 @@ header {
         text-justify:inter-word;
     }
 
-    li{
+    ul.BulletPoints:not(ul.hideBulletPoints) li{
         text-align: justify;
         text-justify: inter-word;
+        list-style-type: disc;
+        color:#0F2925;
+        
     }
 
     a.anchor {
