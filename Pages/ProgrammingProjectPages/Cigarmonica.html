@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Programming on Cigarmonica</title>
+        <meta charset = "utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <link rel="stylesheet" href="..\..\Assets\css\styles.css"/>
+        
+        
+    </head>
+    <body>
+        <nav class="navigation">
+            <!-- The goal of this section is to provide easy navigation to other
+             pages of my portfolio -->
+             <ul class="PortfolioLinks hideBulletPoints">
+                <a href = "../../index.html" class="PortfolioLink">Home Page</a>
+                <!-- <a href = "..\Pages/GameDesign.html" class="PortfolioLink">Game Design Portfolio</a> -->
+                <a href = "../Programming.html" class="PortfolioLink">Programming Portfolio</a>
+                <a href = "../Writing.html" class="PortfolioLink">Writing Portfolio</a>
+             </ul>
+        </nav>
+        <header class="Explanation">
+            <h1>Programming Done On Cigarmonica</h1>
+            <!--<img src="..\images/header.jpg" style="width:50%"/>-->
+        </header>
+        <section class="NavigationLinks">
+            <h4>Page Sections</h4>
+            <ul class="hideBulletPoints">
+                <li><a href=#PurposeAnchor>Purpose</a></li>
+                <li><a href=#DialogueSystemAnchor>Dialogue System</a></li>
+                <li><a href=#OtherSystemAnchor>Other Systems</a></li>
+                <li><a href=#WhatILearnedAnchor>What I Learned</a></li>
+                <li><a href=#HindsightAnchor>Hindsight</a></li>
+            </ul>
+        </section>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/kSRfPjOYukI?si=VBbW6cOsSzx3VAsh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <a class="anchor" id="PurposeAnchor"></a>
+        <section id="Purpose">
+            <h4>Purpose</h4>
+            <ul class="BulletPoints">
+                <li>This was a group effort by my college's Game Design Club</li>
+                <li>Our goal was to make a simple game over the course of a few weeks. It went into the next month due to the nature of that spring semester.</li>
+                <li>I wound up the main programmer: I programmed the dialogue, movement, timer, and camera systems.</li>
+                <li>I had not expected to shoulder so much of the game's programming, but I it was my first actual expereince with the "wiring everything together" aspect of this field that I've come to enjoy.</li>
+            </ul>
+        </section>
+
+        <a class="anchor" id="DialogueSystemAnchor"></a>
+        <section id="DialogueSystem">
+            <h4>Dialogue System</h4>
+            <ul class="BulletPoints">
+                <li>The dialogue system was designed to facilitate interactions between players and NPCs.</li>
+                <li>I worked with our writers (of which I was one myself) to try to make our goals possible.</li>
+                <li>I implemented a proto-bytecode of sorts (though I didn't know the meaning of that word).</li>
+                
+                
+                <h5>How it works</h5>
+                <li>The dialogue lines exist as scriptable objects in Unity. Each character stores a list of dialogue lines, that can be randomized or played in order.</li>
+                <ul class="BulletPoints">
+                    <li>When the play dialogue method is called, a reference to the specific line of dialogue is passed in.</li>
+                    <li>the dialogue runs by listening for user clicks to advance to the next line. Dialogue runs until a line only contains "END DIALOGUE"</li>
+                    <li>To make the sort of proto-bytecode work, before displaying dialogue, the dialogue manager parses the dialogue string, and if it starts with "COMMANDS," then that line isn't displayed, and functionality is carried out.</li>
+                    <li>With these commands, the dialogue manager can: play sound, make things appear or disappear on screen, wait [x] time, and "trade" an object</li>
+                </ul>
+            </ul>
+        </section>
+
+        <a class="anchor" id="OtherSystemsAnchor"></a>
+        <section id="OtherSystems">
+            <h4>Other Systems</h4>
+            <ul class="BulletPoints">
+                <li>The movement system is a simple point and click system. The major issues it has come from my failure to make affordances clear, and that it is not a true pathfinding system.</li>
+                <li>The camera system changes the player's camera angle and camera they see through when the player enters a trigger collider</li>
+                <li>While the player is moving, the camera turns towards the player, so players don't have a ton of dead spots in their vision, without needing control over the camera</li>
+                <li>I also worked on the timer system, though that was a joint effort between one other person and I; the biggest issue was figuring out how to make the timer pause when the player interacts with NPCs</li>
+            </ul>
+        </section>
+
+        <a class="anchor" id="WhatILearnedAnchor"></a>
+        <section id="WhatILearned">
+            <h4>What I learned</h4>
+            <ul class="BulletPoints">
+                <li>I gained a vastly improved understanding of Unity and even learned some programming concepts through my work on each of these systems</li>
+                <li>For example, I learned about Scriptable Objects, Coroutines, and the Singleton programming pattern</li>
+                <li>How to set realistic expectations for what I could program when working with other sub-teams</li>
+                <li>What I could promise and deliver upon in a quick time frame</li>
+                <li>How to reuse code to meet the needs of other sub-teams, rather than making everything from scratch; the dialogue system did the majority of the functionality in the game.</li>
+            </ul>
+        </section>
+
+        <a class="anchor" id="HindsightAnchor"></a>
+        <section id="Hindsight">
+            <h4>What I Would Do Differently, From 2 Years Later</h4>
+            <ul class="BulletPoints">
+                <li>I would properly document the dialogue system, and explain how it works so that others could work with it when I wasn't there:</li>
+                <ul class="BulletPoints">
+                    <li>This could have been as simple as a shared google doc with a table filled with columns for class,method name, explanation, parameters, return values, and requirements</li>
+                    <li>I would also explain how to make new commands, as that was one of the issues we ran into late in development when I wasn't able to be there.</li>
+                    <li>I could have done something similar for the commands system too, such as "command name, what it does, what parameters it takes"</li>
+                </ul>
+                <li>I would have ensured that affordances are properly conveyed, as right now, that is not done.</li>
+                <li>To ensure that the affordances fit with the aesthetics of the game, I would likely have used a panel to display a character's name at the top when the mouse hovers over them.</li>
+                <li>I would have implemented the actual point and click movement with an actual navmesh, since that would only need to be baked once for this game.</li>
+            </ul>
+        </section>
+
+        
+    </body>
+     <footer class="Links">
+            <!-- The goal of this section is to provide links to resumes or social medias or etc... on my portfolio -->
+            <!-- I would like for these links to be horizontal along the bottom and easily differentiable with text below them-->
+            <p class="Explanation">You can find my social media or ways to contact me below</p> <!-- holder text for icons or images that I will hope to put here -->
+            
+            <ul class="ResumeEmail hideBulletPoints">
+               <li><a href = "mailto:noahGartenberg1@gmail.com">Email Address</a></li>
+            </ul>
+            <ul class = "SocialLinks hideBulletPoints">
+                <li><a href = "https://nzgberg.itch.io/" class="SocialLink"><img src = "../../images/itchio-textless-black.svg" style="width:96px;height:96px;"/><p>itch.io</p></a></li>
+                <li><a href = "https://github.com/Noah-Gartenberg" class="SocialLink"><img src = "../../images/github-mark.png" style="width:96px;height:96px;"/><p>Github</p></a></li>
+                <li><a href = "https://next.nexusmods.com/profile/nzgberg/mods" class="SocialLink"><img src = "../../images/nexusModsLog.png" style="width:96px;height:96px;"/><p>Nexus Mods</p></a></li>
+                <li><a href = "https://www.linkedin.com/in/noah-gartenberg" class="SocialLink"><img src = "../../images/In-Blue-96.png" style="width:96px;height:96px;"/><p>LinkedIn</p></a></li>
+               
+            </ul>
+        </footer>
+</html>

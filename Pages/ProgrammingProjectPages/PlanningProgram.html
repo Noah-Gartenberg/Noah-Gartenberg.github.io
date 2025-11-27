@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Planning Program</title>
+        <meta charset = "utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <link rel="stylesheet" href="..\..\Assets\css\styles.css"/>
+        
+        
+    </head>
+    <body>
+        <nav class="navigation">
+            <!-- The goal of this section is to provide easy navigation to other
+             pages of my portfolio -->
+             <ul class="PortfolioLinks hideBulletPoints">
+                <a href = "../../index.html" class="PortfolioLink">Home Page</a>
+                <!-- <a href = "..\Pages/GameDesign.html" class="PortfolioLink">Game Design Portfolio</a> -->
+                <a href = "../Programming.html" class="PortfolioLink">Programming Portfolio</a>
+                <a href = "../Writing.html" class="PortfolioLink">Writing Portfolio</a>
+             </ul>
+        </nav>
+        <header class="Explanation">
+            <h1>Planning Program</h1>
+            <!--<img src="..\images/header.jpg" style="width:50%"/>-->
+        </header>
+        <section class="NavigationLinks">
+            <h4>Page Sections</h4>
+            <ul class="hideBulletPoints">
+                <li><a href="#ProjectGoalsAnchor" class="ItemLink">Project Goals</a></li>
+                <li><a href="#DesignAnchor" class="ItemLink">Design</a></li>
+                <li><a href="#ProcessAnchor" class="ItemLink">Learning Process</a></li>
+                <li><a href="#UIAnchor" class="ItemLink">User Interface</a></li>
+                <li><a href="#DataFlowAnchor" class="ItemLink">Data Flow</a></li>
+                <li><a href="#NextGoalsAnchor" class="ItemLink">Next Goals</a></li>
+            </ul>
+        </section>
+
+        <a class="anchor" id="ProjectGoalsAnchor"></a>
+        <section id="ProjectGoals">
+            <h2>ProjectGoals</h2>
+            <ul class="BulletPoints">
+                <li>Create a program capable of replacing my paper planner</li>
+                <li>Learn software development and at least one tool, framework, or library, that I can use during my honors research to create a tool which I can use.</li>
+            </ul>
+        </section>
+
+        <a class="anchor" id="DesignAnchor"></a>
+        <section id="Design">
+            <h2>Design</h2>
+            <p>I started designing for this project halfway through sophomore year. I created a mock up of what I had been envisioning at the time in google slides.</p>
+            <img style="width:50%; display:block;" src="../../images/PlannerProgramImages/EarliestPlanningProgramVersion.png">
+            <ul class="BulletPoints">
+                <li>I wanted to be able to create a file - referred to as a plan - in which I could break down my tasks into smaller and smaller parts.</li>
+                <li>Ex: I might have needed to work on a project - rather than writing "work on project" into my planner, I could break down each part of what I had to do in this program.</li>
+                <li>Each plan needed to be able to display tasks, which could hold subitems. These subitems could be themselves tasks, images, or link to other plans</li>
+                <li>I wanted to be able to display multiple plans at once.</li>
+                <li>I planned to store plans in XML, as I had worked with it while making mods for BG3.</li>
+                <li>Though I began programming at this time, I didn't get much done; school work and other obligations took much of my attention, and what I had left was spent on learning WPF</li>
+            </ul>
+            <p>Late in the summer before Junior year, I became inspired and began planning once more. The general idea remained the same, but I also added a bit more to it.</p>
+            <img style="width:50%; display:block;" src="../../images/PlannerProgramImages/UpdatedPlanningProgramDrawing.jpg">
+            <ul class="BulletPoints">
+                <li>The major new idea I had was that of the calendar: I wanted to be able to display tasks that needed to be done within a certain time frame.</li>
+                <li>The goal was not for this program to fill the role of a schedule. I just realized I could not effectively plan dealing with tasks if I didn't take time factors into account</li>
+                <li>To store the data related to tasks that had to be completed in/by a time frame, I decided to use an SQLite database.</li>
+                <li>For the database, I'm trying to apply knowledge that I learned in my databases class this past semester. I'm trying to create the database in third-normal-form to avoid redundant data</li>
+                <li>To do this, I have a table for the version info, a table for the plans, a table for tasks, and then a table for the dates tied to the tasks. This way, I'm not duplicating data if a task has multiple durations, or if there are multiple time sensetive tasks in one plan.</li>
+            </ul>
+            <img style="width:50%; display:block;" src="../../images/PlannerProgramImages/DatabaseDiagramMVP.png">
+        </section>
+
+        <a class="anchor" id="ProcessAnchor"></a>
+        <section id="LearningProcess">
+            <h2>Learning Process</h2>
+            <p>One of the most important things for me about this project is to <i>learn</i> Software development. Every line of code used, I have typed manually, rather than simple copy-pasting, so I can ensure I understand how it works and what it does.</p>
+            <ul class="BulletPoints">
+                <li>As I wanted to learn Software Development, I am trying to stick to the model-view-viewmodel programming pattern for the main functionality.</li>
+                <li>I have avoided the use of LLM written code when working on this project; with the breaks I take due to my workload, I want to make sure I understand the code I write and why I wrote it.</li>
+                <li>If I get stuck on a syntax issue or code issue, I work until I figure it out, and I sometimes google the problem. Code documentation and stack overflow have been very helpful.</li>
+                <li>When I figure out the answer, I note what the answer was or where I found it in a comment, so if I ever want to return to it, I can.</li>
+                <li>If I need help for the software's design, or code-relationship issue, I seek advice from a professor of mine.</li>
+                <li>If I need help about the database, I seek advice from my databases professor.</li>
+            </ul>
+        </section>
+
+        <a class="anchor" id="UIAnchor"></a>
+        <section id="User Interface">
+            <h2>User Interface</h2>
+            <p>The UI right now is admittedly not the best. I have tried to make it look similar to a paper planner, though.</p>
+            <ul class="BulletPoints">
+                <li>There is a black rectangle on the left, where I would put a spiral - like it's spiral bound. There are tabs on the right (denoting calendars, and plans), like you'd have tabs for months of the year</li>
+            </ul>
+            <img style="width:50%; display:block;" src="../../images/PlannerProgramImages/ExamplePlanToday.png">
+            <img style="width:50%; display:block;" src="../../images/PlannerProgramImages/MonthlyCalendarWithTasks2.png">
+            <img style="width:50%; display:block;" src="../../images/PlannerProgramImages/WeeklyCalendarWithTasks.png">
+
+        </section>
+
+        <a class="anchor" id="DataFlowAnchor"></a>
+        <section id="Data flow">
+            <h2>Data flow</h2>
+            <ul class="BulletPoints">
+                <li>Only the main-window view model class can access the sqlite database.</li>
+                <li>The main window view model "tells" everything else what to do.</li>
+                <li>The tasks, plans, and sub-items should not need a reference to the main-window-view model instance, or to any other plans in active memory.</li>
+                <li>The calendars should not need to access the plans when they are in active memory.</li>
+                <li>If I do things right, the tasks displayed in the calendar should be cached, so that the program doesn't need to go to the database as often to fetch them.</li>
+            </ul>
+        </section>
+
+        <a class="anchor" id="NextGoalsAnchor"></a>
+        <section id="NextGoals">
+            <h2>Next Goals</h2>
+            <p>The end of this semester has dramatically limited how much work I can do, so I hope to pick this project back up over winter break.</p>
+            <ul class="BulletPoints">
+                <li>I want to transition the view models for the plans, tasks, text (larger text box sub-items, without checkboxes or subitems of their own), and dates to be more event based, to reduce the coupling between classes that is present in the code as it currently stands.</li>
+                <li>I want to have multiple plans open at once.</li>
+                <li>I want to be able to pan the "camera" around the plans</li>
+            </ul>
+        </section>
+    </body>
+    <footer class="Links">
+            <!-- The goal of this section is to provide links to resumes or social medias or etc... on my portfolio -->
+            <!-- I would like for these links to be horizontal along the bottom and easily differentiable with text below them-->
+            <p class="Explanation">You can find my social media or ways to contact me below</p> <!-- holder text for icons or images that I will hope to put here -->
+            
+            <ul class="ResumeEmail hideBulletPoints">
+               <li><a href = "mailto:noahGartenberg1@gmail.com">Email Address</a></li>
+            </ul>
+            <ul class = "SocialLinks hideBulletPoints">
+                <li><a href = "https://nzgberg.itch.io/" class="SocialLink"><img src = "../../images/itchio-textless-black.svg" style="width:96px;height:96px;"/><p>itch.io</p></a></li>
+                <li><a href = "https://github.com/Noah-Gartenberg" class="SocialLink"><img src = "../../images/github-mark.png" style="width:96px;height:96px;"/><p>Github</p></a></li>
+                <li><a href = "https://next.nexusmods.com/profile/nzgberg/mods" class="SocialLink"><img src = "../../images/nexusModsLog.png" style="width:96px;height:96px;"/><p>Nexus Mods</p></a></li>
+                <li><a href = "https://www.linkedin.com/in/noah-gartenberg" class="SocialLink"><img src = "../../images/In-Blue-96.png" style="width:96px;height:96px;"/><p>LinkedIn</p></a></li>
+               
+            </ul>
+        </footer>
+</html>

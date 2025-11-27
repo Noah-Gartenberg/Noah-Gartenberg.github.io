@@ -14,9 +14,9 @@
              pages of my portfolio -->
              <ul class="PortfolioLinks hideBulletPoints">
                 <a href = "..\index.html" class="PortfolioLink">Home Page</a>
-                <a href = "..\Pages/GameDesign.html" class="PortfolioLink">Game Design Portfolio</a>
+                <!-- <a href = "..\Pages/GameDesign.html" class="PortfolioLink">Game Design Portfolio</a> -->
                 <a href = "..\Pages/Programming.html" class="PortfolioLink">Programming Portfolio</a>
-                <a href = "..\Pages/Writing.html" class="PortfolioLink">Writing Portfolio</a>
+                <!-- <a href = "..\Pages/Writing.html" class="PortfolioLink">Writing Portfolio</a> -->
              </ul>
         </nav>
         <header class="Explanation">
@@ -26,16 +26,114 @@
         <section class="NavigationLinks">
             <h4>Page Sections</h4>
             <ul class="hideBulletPoints">
+                <li><a href="#CurrentProjectsAnchor" class="ItemLink">Current Projects</a></li>
+                <li><a href = #SoftwareDevelopmentAnchor class="ItemLink">Software Development</a></li>
                 <li><a href = #ProgrammingGamesAnchor class="ItemLink">Games Programming</a></li>
                 <li><a href = #WebDesignAnchor class="ItemLink">Web Design</a></li>
-                <li><a href = #SoftwareDevelopmentAnchor class="ItemLink">Software Development</a></li>
             </ul>
         </section>
+
+        <a class="anchor" id="CurrentProjectsAnchor"></a>
+        <section id="CurrentProjects">
+            <h4>Current Projects</h4>
+            <!--Show Footage from Thinq Tanq-->
+            <h5>Untitled Project for Course</h5>
+            <ul class="BulletPoints">
+                <li>Building using Unreal Engine 5 C++ and Blueprints</li>
+                <li>Goal is to create a robust and easily extendable interaction system that allows for the use of both environmental interactions, and among us style mini-games.</li>
+            </ul>
+            <p>Accidentally uploaded to shorts - apologies</p>
+            <iframe width="560" height="315" src="https://youtube.com/shorts/LJlWyaEdx0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <!--Show development images of Planner Program-->
+            <img style="width:50%; display:block;" src="../images/PlannerProgramImages/ExamplePlanToday.png">
+            <h5>Planner Program (<a href=#SoftwareDevelopmentAnchor>see below for more info</a>)</h5>
+            <ul class="BulletPoints">
+                <li>Learning software development & creating program to render my paper planner obsolete</li>
+                <li>Creating using WPF and C#</li>
+            </ul>
+
+        </section>
+
+        <a class="anchor" id="SoftwareDevelopmentAnchor"></a>
+        <section id="SoftwareDevelopment">
+            <h2>Software Development</h2> 
+            <h3>Planning Program - <a href="#">(link to github repository)</a></h3>
+            <p><a href="ProgrammingProjectPages/PlanningProgram.html">See more info:</a></p>
+            <uL class="hideBulletPoints">
+                <li><h4>Goals:</h4></li>
+                <ul class="BulletPoints">
+                    <li>Learn software development for career and honors research</li>
+                    <li>Create a program able to replace my planner which I use for writing down tasks I need to do and when to do them</li>
+                    <ul class="BulletPoints">
+                        <li>I want to have a plan, that can have individual tasks (that can be marked as complete), which can be broken down into smaller sub-tasks, expanded on in larger text blocks, and marked as needing to be completed in certain time-frames.</li>
+                    </ul>
+                </ul>
+
+                <li><h4>How am I doing this</h4></li>
+                <ul class="BulletPoints">
+                    <li>Software made using WPF and C#</li>
+                    <li>Storing data for individual plans using XML</li>
+                    <li>Storing dates in SQLite database</li>
+                </ul>
+
+                <li><h4>What am I learning</h4></li>
+                <ul class="BulletPoints">
+                    <li>Software development principles</li>
+                    <li>How to work in larger code-bases than I've previously worked in without getting overwhelmed</li>
+                    <li>How to pinpoint, breakdown, and analyze my problems in a program, and working to find a solution</li>
+                    <li>Proper debugging</li>
+                </ul>
+            </uL>
+            <hr>
+        </section>
+
         <a class="anchor" id="ProgrammingGamesAnchor"></a>
         <section id="ProgrammingGames">
             <h2>Programming Games</h2>
+
+            <h3>Unreleased Indie Game - ESCape Game Studio</h3>
+            <p><a href="ProgrammingProjectPages/ESCapeGameStudioUnreleased.html">See More</a></p>
+            <section>
+                <h4>What I was asked to do</h4>
+                <ul class="BulletPoints hideBulletPoints">
+                    <li>Program game mechanics</li>
+                    <li>Implement important systems</li>
+                    <li>Tie work done by others - art, animation, etc - into game in a functional state</li>
+                </ul>
+            </section>
+
+            <a class="anchor" id="ImplementedAnchor"></a>
+            <section id="WhatIMade">
+                <h4>What I made/worked on</h4>
+                <ul class="BulletPoints hideBulletPoints">
+                    <li>Tutorial System</li>
+                    <iframe width="560" height="315" src="https://youtu.be/kFJl5iGM2mo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <li>Enemy Attack System</li>
+                    <li>Boss Fight System</li>
+                    <!--VIDEO OF BOSS FIGHT SYSTEM-->
+                    <iframe width="560" height="315" src="https://youtu.be/7FDubzfSsw8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <li>Enemies</li>
+                    <!--VIDEO OF PLANT AND SPIKE ATTACKS-->
+                </ul>
+                <!-- <div class="Videos">
+                    <video src="../Assets/videos/ESCapeGameStudio/TutorialComplete.mp4" style="width:50%; float:left;"></video>
+                    <video src="../Assets/videos/ESCapeGameStudio/BossAttackObjectPooling&FXAdded.mp4" style="width:50%; float:left;"></video>
+                </div> -->
+            </section>
+
+
+            <a class="anchor" id="LearnedAnchor"></a>
+            <section id="WhatILearned">
+                <h4>What I Learned</h4>
+                <ul class="BulletPoints hideBulletPoints">
+                    <li>Data Flow Diagrams</li>
+                    <li>Importance of planning; I've begun every project since with at least a (digital) sticky note that notes what classes I'll need and how they'll connect together.</li>
+                </ul>
+            </section>
+
+
             <h3>Cigarmonica</a> - Game Design Club Group Project (<a href="https://albino-penguin.itch.io/cigarmonica" class="PageLink"><i>Link</i></a>)- 6 downloads</h3>
-                
+                <p><a href=ProgrammingProjectPages/Cigarmonica.html>See more info</a></p>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/kSRfPjOYukI?si=VBbW6cOsSzx3VAsh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <ul class="BulletPoints hideBulletPoints">
                     <li><h4>Purpose</h4></li>
@@ -94,7 +192,7 @@
             </ul>
             <hr>
         </section>
-        
+
         <a class="anchor" id="WebDesignAnchor"></a>
         <section id="WebDesign">
             <h2>Web Development</h2>
@@ -135,12 +233,7 @@
             </ul>
             <hr>
         </section>
-        <a class="anchor" id="SoftwareDevelopmentAnchor"></a>
-        <section id="SoftwareDevelopment">
-            <h2>Software Development</h2>
-            <p>Come back soon! I'm working on a project or two and should have them in a state to share an image and describe my goals soon, while I work on completing the  finished product.</p>
-            <hr>
-        </section>
+        
         <footer class="Links">
             <!-- The goal of this section is to provide links to resumes or social medias or etc... on my portfolio -->
             <!-- I would like for these links to be horizontal along the bottom and easily differentiable with text below them-->

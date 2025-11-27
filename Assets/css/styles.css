@@ -68,6 +68,7 @@ header {
         text-decoration: underline;
     }
 
+
 /*Navigation bar*/
     nav{
         overflow:hidden;
@@ -136,14 +137,30 @@ header {
         text-align: justify;
         text-justify: inter-word;
     }
-
+    
     p{
         color: #0F2925;
         align-items:center;
         text-align: justify;
         text-justify:inter-word;
+        text-wrap-mode: wrap;
     }
-
+    /*Expander button*/
+    
+    button{
+        overflow:hidden;
+        background-color: #2C372E;
+        color: white;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+    
+    button:hover{
+        background-color: #17663b;
+        color: white;
+    }
+    
+    
     ul.hideBulletPoints ul.BulletPoints:not(ul.hideBulletPoints) li{
         text-align: justify;
         text-justify: inter-word;
@@ -151,7 +168,7 @@ header {
         color:#0F2925;
         
     }
-
+    
     a.anchor {
         display: block;
         position: relative;
@@ -159,8 +176,11 @@ header {
         visibility: hidden;
         
     }
-
-/*Page Sections Sidebar*/
+    
+    div.DataFlowDiagrams {
+        display:none;
+    }
+    /*Page Sections Sidebar*/
     .NavigationLinks {
         
         margin-right: 2.25em;
@@ -177,26 +197,26 @@ header {
         outline-color:#17663b;
         
     }
-
+    
     .NavigationLinks h4 {
         display: block;
         padding:0;
         margin:0;
     }
-
+    
     .NavigationLinks ul {
         display: block;
     }
-
-
-/*Media querys*/
- /* Extra small devices (phones, 600px and down) */
- @media only screen and (max-width: 600px) {
-    .NavigationLinks {
-        display: none;
-    }
-
-    nav ul a {
+    
+    
+    /*Media querys*/
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+        .NavigationLinks {
+            display: none;
+        }
+        
+        nav ul a {
         font-size:.6em;
         padding: .8em .4em;
     }
@@ -204,7 +224,7 @@ header {
         width:fit-content;
         height:fit-content;
     }
-
+    
     section {
         padding-right:2em;
     }
